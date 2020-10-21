@@ -1,4 +1,4 @@
-let apiKey = {key: 'ba2d8ffd-1992-4339-8049-dccfc0502aca'}
+let apiKey = {key: 'PUT HERE YOUR API KEYS'}
     
 fetch('https://pro-api.coinmarketcap.com/v1/cryptocurrency/map?CMC_PRO_API_KEY='+apiKey.key)
   .then((res) => {
