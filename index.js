@@ -1,11 +1,11 @@
 let apiKey = {key: 'PUT HERE YOUR API KEYS'}
     
 fetch('https://pro-api.coinmarketcap.com/v1/cryptocurrency/map?CMC_PRO_API_KEY='+apiKey.key)
-  .then((res) => {
+  .then(res => {
       if(res.ok) return res.json()
       throw new Error(`Erro ao executar a requisição, status: ${res.status}`)
   })
-  .then((api) => {
+  .then(api => {
       var text = ""
       
       for (let i = 0; i < 10; i++) {
@@ -24,6 +24,6 @@ fetch('https://pro-api.coinmarketcap.com/v1/cryptocurrency/map?CMC_PRO_API_KEY='
         document.getElementById("coins").innerHTML = text
       }
   })
-  .catch((error) => {
+  .catch(error => {
     console.error(error.message)
   })
